@@ -3,7 +3,8 @@
 let z = 0;
 // const inputtedNumbers = [x, y];
 
-let numbersInput = inputArea.createElement("div");
+let inputArea = document.querySelector(".inputArea");
+
 
 const addButton = document.getElementById("addButton");
 const subtractButton = document.getElementById("subtractButton");
@@ -45,8 +46,21 @@ function doMath() {
 doMath();
 
 addButton.addEventListener("click", operate);
+subtractButton.addEventListener("click", operate);
+multiplyButton.addEventListener("click", operate);
+divideButton.addEventListener("click", operate);
+// divideButton.addEventListener("click", clearInput);
 
-function operate(operator, x, y) {}
+oneButton.addEventListener("click", updateInput);
+
+function operate(x, operator, y) {}
+
+function updateInput() {
+  if (oneButton.click) {
+    let numbersInput = inputArea.createElement("div");
+    // numbersInput.
+  }
+}
 
 // function createCalculatorButtons() {
 //   while (z > 10) {
