@@ -3,29 +3,50 @@
 let z = 0;
 // const inputtedNumbers = [x, y];
 
-function add(x, y) {
-  let sum = x + y;
-  return sum;
-}
+let numbersInput = inputArea.createElement("div");
 
-function subtract(x, y) {
-  let difference = x - y;
-  return difference;
-}
+const addButton = document.getElementById("addButton");
+const subtractButton = document.getElementById("subtractButton");
+const multiplyButton = document.getElementById("multiplyButton");
+const divideButton = document.getElementById("divideButton");
+const clearButton = document.getElementById("clearButton");
+const oneButton = document.getElementById("oneButton");
+const twoButton = document.getElementById("twoButton");
+const threeButton = document.getElementById("threeButton");
+const fourButton = document.getElementById("fourButton");
+const fiveButton = document.getElementById("fiveButton");
+const sixButton = document.getElementById("sixButton");
+const sevenButton = document.getElementById("sevenButton");
+const eightButton = document.getElementById("eightButton");
+const nineButton = document.getElementById("nineButton");
+const equalsButton = document.getElementById("equalsButton");
 
-function multiply(x, y) {
-  let product = x * y;
-  return product;
-}
+function doMath() {
+  function add(x, y) {
+    let sum = x + y;
+    return sum;
+  }
 
-function divide(x, y) {
-  let quotient = x / y;
-  return quotient;
-}
+  function subtract(x, y) {
+    let difference = x - y;
+    return difference;
+  }
 
-// function operate(operator, x, y) {
-    
-// }
+  function multiply(x, y) {
+    let product = x * y;
+    return product;
+  }
+
+  function divide(x, y) {
+    let quotient = x / y;
+    return quotient;
+  }
+}
+doMath();
+
+addButton.addEventListener("click", operate);
+
+function operate(operator, x, y) {}
 
 // function createCalculatorButtons() {
 //   while (z > 10) {
