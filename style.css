@@ -3,18 +3,38 @@
     align-items: center;
 }
 
-.buttons {
+.functionButtons {
     display: flex;
-    /* flex-direction: column; */
-    /* height: 75vh;
-    width: 60vw; */
+    flex-flow: wrap;
+    justify-content: center;
     padding: 20px;
     gap: 10px;
     align-items: center;
 }
 
+.functionButtons>* {
+    flex: 1 1 160px;
+}
+
+.numberButtons {
+    display: grid;
+    width: 10vw;
+    grid-template-columns: repeat(auto-fill,minmax(80px, 1fr));
+    /* flex-flow: wrap column;
+    justify-content: center; */
+    padding: 20px;
+    gap: 10px;
+    /* align-items: center; */
+}
+
+.numberButtons>* {
+    /* flex: 1 1 160px; */
+    /* flex: 0 0 1; */
+}
+
 button {
     cursor: pointer;
-    padding: 3px 30px;
+    padding: 10px 30px;
+    padding-top: 10px;
     /* border-radius: 100px; */
 }
