@@ -1,20 +1,19 @@
 .gridsContainer {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .functionButtons {
-    display: flex;
+    display: grid;
     flex-flow: wrap;
-    justify-content: center;
-    padding: 20px;
+    width: 10vw;
     gap: 10px;
-    align-items: center;
+    padding: 20px;
 }
 
-.functionButtons>* {
+/* .functionButtons>* {
     flex: 1 1 160px;
-}
+} */
 
 .numberButtons {
     display: grid;
@@ -27,13 +26,12 @@
     /* align-items: center; */
 }
 
-.numberButtons>* {
-    /* flex: 1 1 160px; */
-    /* flex: 0 0 1; */
-}
+/* .numberButtons>* {
+    flex: 1 1 160px;
+    flex: 0 0 1;
+} */
 
 button {
-    cursor: pointer;
     padding: 10px 30px;
     padding-top: 10px;
     /* border-radius: 100px; */
