@@ -5,12 +5,12 @@ let z = 0;
 
 let inputArea = document.querySelector(".inputArea");
 
-
 const addButton = document.getElementById("addButton");
 const subtractButton = document.getElementById("subtractButton");
 const multiplyButton = document.getElementById("multiplyButton");
 const divideButton = document.getElementById("divideButton");
 const clearButton = document.getElementById("clearButton");
+const zeroButton = document.getElementById("zeroButton");
 const oneButton = document.getElementById("oneButton");
 const twoButton = document.getElementById("twoButton");
 const threeButton = document.getElementById("threeButton");
@@ -56,9 +56,35 @@ oneButton.addEventListener("click", updateInput);
 function operate(x, operator, y) {}
 
 function updateInput() {
+  if (zeroButton.click) {
+    inputArea.innerText = 0;
+  }
   if (oneButton.click) {
-    let numbersInput = inputArea.createElement("div");
-    // numbersInput.
+    inputArea.innerText = 1;
+  }
+  if (twoButton.click) {
+    inputArea.innerText = 2;
+  }
+  if (threeButton.click) {
+    inputArea.innerText = 3;
+  }
+  if (fourButton.click) {
+    inputArea.innerText = 4;
+  }
+  if (fiveButton.click) {
+    inputArea.innerText = 5;
+  }
+  if (sixButton.click) {
+    inputArea.innerText = 6;
+  }
+  if (sevenButton.click) {
+    inputArea.innerText = 7;
+  }
+  if (eightButton.click) {
+    inputArea.innerText = 8;
+  }
+  if (nineButton.click) {
+    inputArea.innerText = 9;
   }
 }
 
