@@ -61,6 +61,7 @@ sixButton.addEventListener("click", updateInput);
 sevenButton.addEventListener("click", updateInput);
 eightButton.addEventListener("click", updateInput);
 nineButton.addEventListener("click", updateInput);
+clearButton.addEventListener("click", updateInput);
 
 function operate(x, operator, y) {}
 
@@ -77,6 +78,7 @@ function updateInput() {
   }
   if (twoButton.click) {
     inputArea.innerText += 2;
+    console.log("test");
     return;
   }
   if (threeButton.click) {
