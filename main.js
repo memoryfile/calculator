@@ -21,6 +21,7 @@ const sevenButton = document.getElementById("sevenButton");
 const eightButton = document.getElementById("eightButton");
 const nineButton = document.getElementById("nineButton");
 const equalsButton = document.getElementById("equalsButton");
+const numberButtons = document.querySelector(".numberButtons");
 
 function doMath() {
   function add(x, y) {
@@ -56,36 +57,39 @@ oneButton.addEventListener("click", updateInput);
 function operate(x, operator, y) {}
 
 function updateInput() {
-  if (zeroButton.click) {
-    inputArea.innerText = 0;
+  if (numberButtons.click) {
+    inputArea.innerText = numberButtons.target.innerText;
   }
-  if (oneButton.click) {
-    inputArea.innerText = 1;
-  }
-  if (twoButton.click) {
-    inputArea.innerText = 2;
-  }
-  if (threeButton.click) {
-    inputArea.innerText = 3;
-  }
-  if (fourButton.click) {
-    inputArea.innerText = 4;
-  }
-  if (fiveButton.click) {
-    inputArea.innerText = 5;
-  }
-  if (sixButton.click) {
-    inputArea.innerText = 6;
-  }
-  if (sevenButton.click) {
-    inputArea.innerText = 7;
-  }
-  if (eightButton.click) {
-    inputArea.innerText = 8;
-  }
-  if (nineButton.click) {
-    inputArea.innerText = 9;
-  }
+  // if (zeroButton.click) {
+  //   inputArea.innerText = 0;
+  // }
+  // if (oneButton.click) {
+  //   inputArea.innerText = 1;
+  // }
+  // if (twoButton.click) {
+  //   inputArea.innerText = 2;
+  // }
+  // if (threeButton.click) {
+  //   inputArea.innerText = 3;
+  // }
+  // if (fourButton.click) {
+  //   inputArea.innerText = 4;
+  // }
+  // if (fiveButton.click) {
+  //   inputArea.innerText = 5;
+  // }
+  // if (sixButton.click) {
+  //   inputArea.innerText = 6;
+  // }
+  // if (sevenButton.click) {
+  //   inputArea.innerText = 7;
+  // }
+  // if (eightButton.click) {
+  //   inputArea.innerText = 8;
+  // }
+  // if (nineButton.click) {
+  //   inputArea.innerText = 9;
+  // }
 }
 
 // function createCalculatorButtons() {

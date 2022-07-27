@@ -34,5 +34,6 @@
 button {
     padding: 10px 30px;
     padding-top: 10px;
+    cursor: pointer;
     /* border-radius: 100px; */
 }
