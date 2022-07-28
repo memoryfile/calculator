@@ -22,6 +22,7 @@ const eightButton = document.getElementById("eightButton");
 const nineButton = document.getElementById("nineButton");
 const equalsButton = document.getElementById("equalsButton");
 const numberButtons = document.querySelector(".numberButtons");
+const signIndicator = document.getElementById("signIndicator")
 
 function doMath() {
   function add(x, y) {
@@ -63,8 +64,10 @@ sixButton.addEventListener("click", () => (inputArea.innerText += 6));
 sevenButton.addEventListener("click", () => (inputArea.innerText += 7));
 eightButton.addEventListener("click", () => (inputArea.innerText += 8));
 nineButton.addEventListener("click", () => (inputArea.innerText += 9));
-// clearButton.addEventListener("click", () => (inputArea.innerText += ));
+clearButton.addEventListener("click", () => (inputArea.innerText = ""));
 
+//WIP
+addButton.addEventListener("click", () => (signIndicator.innerText = "+"));
 
 // function createCalculatorButtons() {
 //   while (z > 10) {
