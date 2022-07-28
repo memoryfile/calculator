@@ -66,7 +66,12 @@ sixButton.addEventListener("click", () => (inputArea.innerText += 6));
 sevenButton.addEventListener("click", () => (inputArea.innerText += 7));
 eightButton.addEventListener("click", () => (inputArea.innerText += 8));
 nineButton.addEventListener("click", () => (inputArea.innerText += 9));
-clearButton.addEventListener("click", () => (inputArea.innerText = ""));
+clearButton.addEventListener("click", clearAll);
+
+function clearAll() {
+  inputArea.innerText = "";
+  signIndicator.innerText = "";
+}
 
 addButton.addEventListener("click", () => (signIndicator.innerText = "+"));
 subtractButton.addEventListener("click", () => (signIndicator.innerText = "-"));
