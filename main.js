@@ -50,62 +50,21 @@ addButton.addEventListener("click", operate);
 subtractButton.addEventListener("click", operate);
 multiplyButton.addEventListener("click", operate);
 divideButton.addEventListener("click", operate);
-// divideButton.addEventListener("click", clearInput);
-
-oneButton.addEventListener("click", updateInput);
-twoButton.addEventListener("click", updateInput);
-threeButton.addEventListener("click", updateInput);
-fourButton.addEventListener("click", updateInput);
-fiveButton.addEventListener("click", updateInput);
-sixButton.addEventListener("click", updateInput);
-sevenButton.addEventListener("click", updateInput);
-eightButton.addEventListener("click", updateInput);
-nineButton.addEventListener("click", updateInput);
-clearButton.addEventListener("click", updateInput);
 
 function operate(x, operator, y) {}
 
-function updateInput() {
-  // if (numberButtons.click) {
-  //   inputArea.innerText = numberButtons.target.innerText;
-  // }
-  if (zeroButton.click) {
-    inputArea.innerText += 0;
-  }
-  if (oneButton.click) {
-    inputArea.innerText += 1;
-    return;
-  }
-  if (twoButton.click) {
-    inputArea.innerText += 2;
-    console.log("test");
-    return;
-  }
-  if (threeButton.click) {
-    inputArea.innerText += 3;
-  }
-  if (fourButton.click) {
-    inputArea.innerText += 4;
-  }
-  if (fiveButton.click) {
-    inputArea.innerText += 5;
-  }
-  if (sixButton.click) {
-    inputArea.innerText += 6;
-  }
-  if (sevenButton.click) {
-    inputArea.innerText += 7;
-  }
-  if (eightButton.click) {
-    inputArea.innerText += 8;
-  }
-  if (nineButton.click) {
-    inputArea.innerText += 9;
-  }
-  if (clearButton.click) {
-    inputArea.innerText += "";
-  }
-}
+zeroButton.addEventListener("click", () => (inputArea.innerText += 0));
+oneButton.addEventListener("click", () => (inputArea.innerText += 1));
+twoButton.addEventListener("click", () => (inputArea.innerText += 2));
+threeButton.addEventListener("click", () => (inputArea.innerText += 3));
+fourButton.addEventListener("click", () => (inputArea.innerText += 4));
+fiveButton.addEventListener("click", () => (inputArea.innerText += 5));
+sixButton.addEventListener("click", () => (inputArea.innerText += 6));
+sevenButton.addEventListener("click", () => (inputArea.innerText += 7));
+eightButton.addEventListener("click", () => (inputArea.innerText += 8));
+nineButton.addEventListener("click", () => (inputArea.innerText += 9));
+// clearButton.addEventListener("click", () => (inputArea.innerText += ));
+
 
 // function createCalculatorButtons() {
 //   while (z > 10) {
