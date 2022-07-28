@@ -22,10 +22,13 @@ const eightButton = document.getElementById("eightButton");
 const nineButton = document.getElementById("nineButton");
 const equalsButton = document.getElementById("equalsButton");
 const numberButtons = document.querySelector(".numberButtons");
-const signIndicator = document.getElementById("signIndicator")
+const signIndicator = document.querySelector(".signIndicator")
 
 function doMath() {
+  addButton.addEventListener("click", add);
   function add(x, y) {
+    // let q = Number(inputArea);
+    // console.log(q);
     let sum = x + y;
     return sum;
   }
@@ -47,7 +50,6 @@ function doMath() {
 }
 doMath();
 
-addButton.addEventListener("click", operate);
 subtractButton.addEventListener("click", operate);
 multiplyButton.addEventListener("click", operate);
 divideButton.addEventListener("click", operate);
@@ -66,8 +68,10 @@ eightButton.addEventListener("click", () => (inputArea.innerText += 8));
 nineButton.addEventListener("click", () => (inputArea.innerText += 9));
 clearButton.addEventListener("click", () => (inputArea.innerText = ""));
 
-//WIP
 addButton.addEventListener("click", () => (signIndicator.innerText = "+"));
+subtractButton.addEventListener("click", () => (signIndicator.innerText = "-"));
+multiplyButton.addEventListener("click", () => (signIndicator.innerText = "×"));
+divideButton.addEventListener("click", () => (signIndicator.innerText = "÷"));
 
 // function createCalculatorButtons() {
 //   while (z > 10) {
