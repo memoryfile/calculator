@@ -36,7 +36,7 @@ const operatorAtPlay = [];
 function add() {
   let z = numberVariables[0] + numberVariables[1];
   if (z % 1 != 0) {
-    let newZ = z.toFixed(2);
+    let newZ = z.toFixed(6);
     console.log(z);
     inputArea.innerText = newZ;
     clearSign();
@@ -57,7 +57,7 @@ function add() {
 function subtract() {
   let z = numberVariables[0] - numberVariables[1];
   if (z % 1 != 0) {
-    let newZ = z.toFixed(2);
+    let newZ = z.toFixed(6);
     console.log(z);
     inputArea.innerText = newZ;
     clearSign();
@@ -76,29 +76,29 @@ function subtract() {
 // }
 
 function multiply() {
-  let product = numberVariables[0] * numberVariables[1];
-  if (product % 1 != 0) {
-    let newProduct = product.toFixed(2);
-    console.log(product);
-    inputArea.innerText = newProduct;
+  let z = numberVariables[0] * numberVariables[1];
+  if (z % 1 != 0) {
+    let newZ = z.toFixed(6);
+    console.log(z);
+    inputArea.innerText = newZ;
     clearSign();
   } else {
-    console.log(product);
-    inputArea.innerText = product;
+    console.log(z);
+    inputArea.innerText = z;
     clearSign();
   }
 }
 
 function divide() {
-  let quotient = numberVariables[0] / numberVariables[1];
-  if (quotient % 1 != 0) {
-    let newQuotient = quotient.toFixed(2);
-    console.log(quotient);
-    inputArea.innerText = newQuotient;
+  let z = numberVariables[0] / numberVariables[1];
+  if (z % 1 != 0) {
+    let newZ = z.toFixed(6);
+    console.log(z);
+    inputArea.innerText = newZ;
     clearSign();
   } else {
-    console.log(quotient);
-    inputArea.innerText = quotient;
+    console.log(z);
+    inputArea.innerText = z;
     clearSign();
   }
 }
