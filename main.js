@@ -106,6 +106,11 @@ function setDivide() {
 
 function operateEquals() {
   grabY();
+  if (!numberVariables[1]) {
+    numberVariables.length = 0;
+    console.log("No other variable found for the operation, returning.");
+    return;
+  }
   switch (signIndicator.innerText) {
     case "+":
       add();
@@ -124,11 +129,6 @@ function operateEquals() {
       break;
   }
   numberVariables.length = 0;
-}
-
-function operateEqualsAdd() {
-  operateEquals();
-  add();
 }
 
 // Number input in calculator view area
