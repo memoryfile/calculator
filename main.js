@@ -22,22 +22,50 @@ const signIndicator = document.querySelector(".signIndicator");
 const numberVariables = [];
 const operatorAtPlay = [];
 
+// function add() {
+//   let sum = numberVariables[0] + numberVariables[1];
+//   if (sum % 1 != 0) {
+//     sum.toFixed(2);
+//     console.log(sum);
+//   }
+//   inputArea.innerText = sum;
+//   console.log(sum);
+//   clearSign();
+// }
+
 function add() {
-  let sum = numberVariables[0] + numberVariables[1];
-  if (sum % 1 != 0) {
-    sum.toFixed(2);
-    console.log(sum);
+  let z = numberVariables[0] + numberVariables[1];
+  if (z % 1 != 0) {
+    let newZ = z.toFixed(2);
+    console.log(z);
+    inputArea.innerText = newZ;
+    clearSign();
+  } else {
+    console.log(z);
+    inputArea.innerText = z;
+    clearSign();
   }
-  inputArea.innerText = sum;
-  console.log(sum);
-  clearSign();
 }
 
+// function subtract() {
+//   let difference = numberVariables[0] - numberVariables[1];
+//   console.log(difference);
+//   inputArea.innerText = difference;
+//   clearSign();
+// }
+
 function subtract() {
-  let difference = numberVariables[0] - numberVariables[1];
-  console.log(difference);
-  inputArea.innerText = difference;
-  clearSign();
+  let z = numberVariables[0] - numberVariables[1];
+  if (z % 1 != 0) {
+    let newZ = z.toFixed(2);
+    console.log(z);
+    inputArea.innerText = newZ;
+    clearSign();
+  } else {
+    console.log(z);
+    inputArea.innerText = z;
+    clearSign();
+  }
 }
 
 // function multiply() {
