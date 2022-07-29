@@ -22,7 +22,7 @@ const eightButton = document.getElementById("eightButton");
 const nineButton = document.getElementById("nineButton");
 const equalsButton = document.getElementById("equalsButton");
 const numberButtons = document.querySelector(".numberButtons");
-const signIndicator = document.querySelector(".signIndicator")
+const signIndicator = document.querySelector(".signIndicator");
 
 function doMath() {
   addButton.addEventListener("click", add);
@@ -50,11 +50,16 @@ function doMath() {
 }
 doMath();
 
-subtractButton.addEventListener("click", operate);
-multiplyButton.addEventListener("click", operate);
-divideButton.addEventListener("click", operate);
+// subtractButton.addEventListener("click", operate);
+// multiplyButton.addEventListener("click", operate);
+// divideButton.addEventListener("click", operate);
 
-function operate(x, operator, y) {}
+function operateAdd() {
+  let x = Number(inputArea.innerText);
+  console.log(x);
+  clearAll();
+  signIndicator.innerText = "+";
+}
 
 zeroButton.addEventListener("click", () => (inputArea.innerText += 0));
 oneButton.addEventListener("click", () => (inputArea.innerText += 1));
@@ -73,13 +78,7 @@ function clearAll() {
   signIndicator.innerText = "";
 }
 
-addButton.addEventListener("click", () => (signIndicator.innerText = "+"));
+addButton.addEventListener("click", operateAdd);
 subtractButton.addEventListener("click", () => (signIndicator.innerText = "-"));
 multiplyButton.addEventListener("click", () => (signIndicator.innerText = "×"));
 divideButton.addEventListener("click", () => (signIndicator.innerText = "÷"));
-
-// function createCalculatorButtons() {
-//   while (z > 10) {
-//     z += 1;
-//   }
-// }
