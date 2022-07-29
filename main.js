@@ -99,16 +99,16 @@ function grabY() {
 }
 
 function addX() {
-  if (numberVariables.length < 2) {
+  // if (numberVariables.length < 2) {
     grabX();
     clearAll();
     setPlus();
     // Only supports one instance of a variable not existing
-  } else {
-    grabX();
-    operateEquals();
-    clearAll();
-  }
+  // } else {
+  //   grabX();
+  //   operateEquals();
+  //   clearAll();
+  // }
 }
 
 function subtractX() {
