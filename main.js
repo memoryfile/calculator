@@ -23,26 +23,30 @@ const numberVariables = [];
 const operatorAtPlay = [];
 
 function add() {
-  clearSign();
   let sum = numberVariables[0] + numberVariables[1];
   inputArea.innerText = sum;
+  console.log(sum);
+  clearSign();
 }
 
 function subtract() {
   clearSign();
   let difference = numberVariables[0] - numberVariables[1];
+  console.log(difference);
   inputArea.innerText = difference;
 }
 
 function multiply() {
   clearSign();
   let product = numberVariables[0] * numberVariables[1];
+  console.log(product);
   inputArea.innerText = product;
 }
 
 function divide() {
   clearSign();
   let quotient = numberVariables[0] / numberVariables[1];
+  console.log(quotient);
   inputArea.innerText = quotient;
 }
 
@@ -58,7 +62,6 @@ function grabY() {
   numberVariables.push(y);
   console.log(y);
   console.log(numberVariables);
-  clearAll();
 }
 
 function addX() {
