@@ -99,24 +99,28 @@ function setDivide() {
 
 function operateEquals() {
   grabY();
-  if (signIndicator.innerText = "+") {
-    add();
-    clearSign();
+  switch (signIndicator.innerText) {
+    case "+":
+      add();
+      clearSign();
+      break;
+
+    case "-":
+      subtract();
+      clearSign();
+      break;
+
+    case "×":
+      multiply();
+      clearSign();
+      break;
+
+    case "÷":
+      divide();
+      clearSign();
+      break;
   }
-  // if (signIndicator.innerText = "-") {
-  //   subtract();
-  //   clearSign();
-  // }
-  // if (signIndicator.innerText = "×") {
-  //   multiply();
-  //   clearSign();
-  // }
-  // if (signIndicator.innerText = "÷") {
-  //   divide();
-  //   clearSign();
-  // }
   numberVariables.length = 0;
-  // clearAll();
 }
 
 function operateEqualsAdd() {
@@ -156,7 +160,3 @@ subtractButton.addEventListener("click", subtractX);
 multiplyButton.addEventListener("click", multiplyX);
 divideButton.addEventListener("click", divideX);
 equalsButton.addEventListener("click", operateEquals);
-
-// subtractButton.addEventListener("click", () => ());
-// multiplyButton.addEventListener("click", () => ());
-// divideButton.addEventListener("click", () => ());
