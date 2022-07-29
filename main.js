@@ -40,11 +40,25 @@ function subtract() {
   clearSign();
 }
 
+// function multiply() {
+//   let product = numberVariables[0] * numberVariables[1];
+//   console.log(product);
+//   inputArea.innerText = product;
+//   clearSign();
+// }
+
 function multiply() {
   let product = numberVariables[0] * numberVariables[1];
-  console.log(product);
-  inputArea.innerText = product;
-  clearSign();
+  if (product % 1 != 0) {
+    let newProduct = product.toFixed(2);
+    console.log(product);
+    inputArea.innerText = newProduct;
+    clearSign();
+  } else {
+    console.log(product);
+    inputArea.innerText = product;
+    clearSign();
+  }
 }
 
 function divide() {
@@ -60,36 +74,6 @@ function divide() {
     clearSign();
   }
 }
-
-// Shows rounding in console, but not in input
-
-// function divide() {
-//   let quotient = numberVariables[0] / numberVariables[1];
-//   if (quotient % 1 != 0) {
-//     quotient.toFixed(2);
-//     console.log(quotient.toFixed(2));
-//   }
-//   console.log(quotient);
-//   inputArea.innerText = quotient;
-//   clearSign();
-// }
-
-// Non-functioning
-
-// function divide() {
-//   switch (quotient = numberVariables[0] / numberVariables[1]) {
-//     case (quotient % 1 != 0):
-//       let newQuotient = quotient.toFixed(2);
-//       console.log(newQuotient);
-//       inputArea.innerText = newQuotient;
-//       clearSign();
-//       break;
-//     default:
-//       console.log(quotient);
-//       inputArea.innerText = quotient;
-//       clearSign();
-//   }
-// }
 
 function grabX() {
   let x = Number(inputArea.innerText);
