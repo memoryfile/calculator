@@ -1,8 +1,3 @@
-// let input = a;
-// let input2 = b;
-let z = 0;
-// const inputtedNumbers = [x, y];
-
 let inputArea = document.querySelector(".inputArea");
 
 const addButton = document.getElementById("addButton");
@@ -24,41 +19,55 @@ const equalsButton = document.getElementById("equalsButton");
 const numberButtons = document.querySelector(".numberButtons");
 const signIndicator = document.querySelector(".signIndicator");
 
-function doMath() {
-  addButton.addEventListener("click", add);
-  function add(x, y) {
-    // let q = Number(inputArea);
-    // console.log(q);
-    let sum = x + y;
-    return sum;
-  }
+const numberVariables = [];
 
-  function subtract(x, y) {
-    let difference = x - y;
-    return difference;
-  }
-
-  function multiply(x, y) {
-    let product = x * y;
-    return product;
-  }
-
-  function divide(x, y) {
-    let quotient = x / y;
-    return quotient;
-  }
+function add() {
+  grabX();
+  grabY();
+  let sum = x + y;
+  return sum;
 }
-doMath();
+
+function subtract(x, y) {
+  let difference = x - y;
+  return difference;
+}
+
+function multiply(x, y) {
+  let product = x * y;
+  return product;
+}
+
+function divide(x, y) {
+  let quotient = x / y;
+  return quotient;
+}
 
 // subtractButton.addEventListener("click", operate);
 // multiplyButton.addEventListener("click", operate);
 // divideButton.addEventListener("click", operate);
 
-function operateAdd() {
+function grabX() {
   let x = Number(inputArea.innerText);
+  numberVariables.push(x);
   console.log(x);
+}
+
+function grabY() {
+  let y = Number(inputArea.innerText);
+  numberVariables.push(y);
+  console.log(y);
+}
+
+function operateAdd() {
+  grabX();
   clearAll();
   signIndicator.innerText = "+";
+}
+
+function operateEquals() {
+  grabY();
+  clearAll();
 }
 
 zeroButton.addEventListener("click", () => (inputArea.innerText += 0));
@@ -79,6 +88,8 @@ function clearAll() {
 }
 
 addButton.addEventListener("click", operateAdd);
+equalsButton.addEventListener("click", operateEquals);
+
 subtractButton.addEventListener("click", () => (signIndicator.innerText = "-"));
 multiplyButton.addEventListener("click", () => (signIndicator.innerText = "×"));
 divideButton.addEventListener("click", () => (signIndicator.innerText = "÷"));
