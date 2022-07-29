@@ -50,7 +50,7 @@ function grabX() {
   let x = Number(inputArea.innerText);
   numberVariables.push(x);
   console.log(x);
-  clearAll();
+  inputArea.innerText = "";
 }
 
 function grabY() {
@@ -63,14 +63,14 @@ function grabY() {
 
 function addX() {
   grabX();
-  // clearAll();
+  clearAll();
   setPlus();
 }
 
 function completeAddX() {
   addX();
-  operateEqualsAdd();
-  numberVariables.length = 0;
+  // operateEqualsAdd();
+  // numberVariables.length = 0;
 }
 
 function subtractX() {
@@ -106,7 +106,12 @@ function setDivide() {
 
 function operateEquals() {
   grabY();
-  clearAll();
+  if (signIndicator.innerText = "+") {
+    add();
+    clearSign();
+  }
+  numberVariables.length = 0;
+  // clearAll();
 }
 
 function operateEqualsAdd() {
@@ -131,6 +136,14 @@ clearButton.addEventListener("click", clearAll);
 function clearAll() {
   inputArea.innerText = "";
   signIndicator.innerText = "";
+}
+
+function clearSign() {
+  signIndicator.innerText = "";
+}
+
+function clearInput() {
+  inputArea.innerText = "";
 }
 
 addButton.addEventListener("click", completeAddX);
