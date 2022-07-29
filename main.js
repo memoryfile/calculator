@@ -36,7 +36,7 @@ const operatorAtPlay = [];
 function add() {
   let z = numberVariables[0] + numberVariables[1];
   if (z % 1 != 0) {
-    let newZ = z.toFixed(6);
+    let newZ = z.toFixed(2);
     console.log(z);
     inputArea.innerText = newZ;
     clearSign();
@@ -57,7 +57,7 @@ function add() {
 function subtract() {
   let z = numberVariables[0] - numberVariables[1];
   if (z % 1 != 0) {
-    let newZ = z.toFixed(6);
+    let newZ = z.toFixed(2);
     console.log(z);
     inputArea.innerText = newZ;
     clearSign();
@@ -78,7 +78,7 @@ function subtract() {
 function multiply() {
   let z = numberVariables[0] * numberVariables[1];
   if (z % 1 != 0) {
-    let newZ = z.toFixed(6);
+    let newZ = z.toFixed(2);
     console.log(z);
     inputArea.innerText = newZ;
     clearSign();
@@ -92,7 +92,7 @@ function multiply() {
 function divide() {
   let z = numberVariables[0] / numberVariables[1];
   if (z % 1 != 0) {
-    let newZ = z.toFixed(6);
+    let newZ = z.toFixed(2);
     console.log(z);
     inputArea.innerText = newZ;
     clearSign();
