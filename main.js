@@ -23,21 +23,25 @@ const numberVariables = [];
 const operatorAtPlay = [];
 
 function add() {
+  clearSign();
   let sum = numberVariables[0] + numberVariables[1];
   inputArea.innerText = sum;
 }
 
 function subtract() {
+  clearSign();
   let difference = numberVariables[0] - numberVariables[1];
   inputArea.innerText = difference;
 }
 
 function multiply() {
+  clearSign();
   let product = numberVariables[0] * numberVariables[1];
   inputArea.innerText = product;
 }
 
 function divide() {
+  clearSign();
   let quotient = numberVariables[0] / numberVariables[1];
   inputArea.innerText = quotient;
 }
@@ -102,22 +106,18 @@ function operateEquals() {
   switch (signIndicator.innerText) {
     case "+":
       add();
-      clearSign();
       break;
 
     case "-":
       subtract();
-      clearSign();
       break;
 
     case "×":
       multiply();
-      clearSign();
       break;
 
     case "÷":
       divide();
-      clearSign();
       break;
   }
   numberVariables.length = 0;
