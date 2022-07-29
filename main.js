@@ -22,18 +22,13 @@ const signIndicator = document.querySelector(".signIndicator");
 const numberVariables = [];
 const operatorAtPlay = [];
 
-// function add() {
-//   let sum = numberVariables[0] + numberVariables[1];
-//   if (sum % 1 != 0) {
-//     sum.toFixed(2);
-//     console.log(sum);
-//   }
-//   inputArea.innerText = sum;
-//   console.log(sum);
-//   clearSign();
-// }
-
 function add() {
+  // if ((numberVariables.length = 2)) {
+  //   let z = numberVariables[0] + numberVariables[1];
+  // }
+  //   if ((numberVariables.length = 3)) {
+  //     let z = numberVariables[0] + numberVariables[1] + numberVariables + [2];
+  //   }
   let z = numberVariables[0] + numberVariables[1];
   if (z % 1 != 0) {
     let newZ = z.toFixed(2);
@@ -46,13 +41,6 @@ function add() {
     clearSign();
   }
 }
-
-// function subtract() {
-//   let difference = numberVariables[0] - numberVariables[1];
-//   console.log(difference);
-//   inputArea.innerText = difference;
-//   clearSign();
-// }
 
 function subtract() {
   let z = numberVariables[0] - numberVariables[1];
@@ -67,13 +55,6 @@ function subtract() {
     clearSign();
   }
 }
-
-// function multiply() {
-//   let product = numberVariables[0] * numberVariables[1];
-//   console.log(product);
-//   inputArea.innerText = product;
-//   clearSign();
-// }
 
 function multiply() {
   let z = numberVariables[0] * numberVariables[1];
@@ -118,9 +99,16 @@ function grabY() {
 }
 
 function addX() {
-  grabX();
-  clearAll();
-  setPlus();
+  if (numberVariables.length < 2) {
+    grabX();
+    clearAll();
+    setPlus();
+    // Only supports one instance of a variable not existing
+  } else {
+    grabX();
+    operateEquals();
+    clearAll();
+  }
 }
 
 function subtractX() {
@@ -197,6 +185,8 @@ sevenButton.addEventListener("click", () => (inputArea.innerText += 7));
 eightButton.addEventListener("click", () => (inputArea.innerText += 8));
 nineButton.addEventListener("click", () => (inputArea.innerText += 9));
 clearButton.addEventListener("click", clearButtonFunction);
+
+// For clearing the input area, sign indicator, variables in arrays
 
 function clearAll() {
   inputArea.innerText = "";
