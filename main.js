@@ -27,24 +27,20 @@ function add() {
   inputArea.innerText = sum;
 }
 
-function subtract(x, y) {
-  let difference = x - y;
-  return difference;
+function subtract() {
+  let difference = numberVariables[0] - numberVariables[1];
+  inputArea.innerText = difference;
 }
 
-function multiply(x, y) {
-  let product = x * y;
-  return product;
+function multiply() {
+  let product = numberVariables[0] * numberVariables[1];
+  inputArea.innerText = product;
 }
 
-function divide(x, y) {
-  let quotient = x / y;
-  return quotient;
+function divide() {
+  let quotient = numberVariables[0] / numberVariables[1];
+  inputArea.innerText = quotient;
 }
-
-// subtractButton.addEventListener("click", operate);
-// multiplyButton.addEventListener("click", operate);
-// divideButton.addEventListener("click", operate);
 
 function grabX() {
   let x = Number(inputArea.innerText);
@@ -67,24 +63,21 @@ function addX() {
   setPlus();
 }
 
-function completeAddX() {
-  addX();
-  // operateEqualsAdd();
-  // numberVariables.length = 0;
-}
-
 function subtractX() {
   grabX();
+  clearAll();
   setMinus();
 }
 
 function multiplyX() {
   grabX();
+  clearAll();
   setMultiply();
 }
 
 function divideX() {
   grabX();
+  clearAll();
   setDivide();
 }
 
@@ -110,6 +103,18 @@ function operateEquals() {
     add();
     clearSign();
   }
+  // if (signIndicator.innerText = "-") {
+  //   subtract();
+  //   clearSign();
+  // }
+  // if (signIndicator.innerText = "×") {
+  //   multiply();
+  //   clearSign();
+  // }
+  // if (signIndicator.innerText = "÷") {
+  //   divide();
+  //   clearSign();
+  // }
   numberVariables.length = 0;
   // clearAll();
 }
@@ -146,7 +151,7 @@ function clearInput() {
   inputArea.innerText = "";
 }
 
-addButton.addEventListener("click", completeAddX);
+addButton.addEventListener("click", addX);
 subtractButton.addEventListener("click", subtractX);
 multiplyButton.addEventListener("click", multiplyX);
 divideButton.addEventListener("click", divideX);
