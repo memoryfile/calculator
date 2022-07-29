@@ -23,7 +23,7 @@ const numberVariables = [];
 const operatorAtPlay = [];
 
 function add() {
-  let sum = numberVariables.indexOf(0) + numberVariables.indexOf(1);
+  let sum = numberVariables[0] + numberVariables[1];
   inputArea.innerText = sum;
 }
 
@@ -63,13 +63,14 @@ function grabY() {
 
 function addX() {
   grabX();
+  // clearAll();
   setPlus();
 }
 
 function completeAddX() {
   addX();
-  add();
-  // Clear numberVariables array
+  operateEqualsAdd();
+  numberVariables.length = 0;
 }
 
 function subtractX() {
@@ -106,6 +107,11 @@ function setDivide() {
 function operateEquals() {
   grabY();
   clearAll();
+}
+
+function operateEqualsAdd() {
+  operateEquals();
+  add();
 }
 
 // Number input in calculator view area
