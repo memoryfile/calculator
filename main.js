@@ -24,31 +24,72 @@ const operatorAtPlay = [];
 
 function add() {
   let sum = numberVariables[0] + numberVariables[1];
+  if (sum % 1 != 0) {
+    sum.toFixed(2);
+    console.log(sum);
+  }
   inputArea.innerText = sum;
   console.log(sum);
   clearSign();
 }
 
 function subtract() {
-  clearSign();
   let difference = numberVariables[0] - numberVariables[1];
   console.log(difference);
   inputArea.innerText = difference;
+  clearSign();
 }
 
 function multiply() {
-  clearSign();
   let product = numberVariables[0] * numberVariables[1];
   console.log(product);
   inputArea.innerText = product;
+  clearSign();
 }
 
 function divide() {
-  clearSign();
   let quotient = numberVariables[0] / numberVariables[1];
-  console.log(quotient);
-  inputArea.innerText = quotient;
+  if (quotient % 1 != 0) {
+    let newQuotient = quotient.toFixed(2);
+    console.log(quotient);
+    inputArea.innerText = newQuotient;
+    clearSign();
+  } else {
+    console.log(quotient);
+    inputArea.innerText = quotient;
+    clearSign();
+  }
 }
+
+// Shows rounding in console, but not in input
+
+// function divide() {
+//   let quotient = numberVariables[0] / numberVariables[1];
+//   if (quotient % 1 != 0) {
+//     quotient.toFixed(2);
+//     console.log(quotient.toFixed(2));
+//   }
+//   console.log(quotient);
+//   inputArea.innerText = quotient;
+//   clearSign();
+// }
+
+// Non-functioning
+
+// function divide() {
+//   switch (quotient = numberVariables[0] / numberVariables[1]) {
+//     case (quotient % 1 != 0):
+//       let newQuotient = quotient.toFixed(2);
+//       console.log(newQuotient);
+//       inputArea.innerText = newQuotient;
+//       clearSign();
+//       break;
+//     default:
+//       console.log(quotient);
+//       inputArea.innerText = quotient;
+//       clearSign();
+//   }
+// }
 
 function grabX() {
   let x = Number(inputArea.innerText);
