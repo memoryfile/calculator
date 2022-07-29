@@ -143,11 +143,17 @@ sixButton.addEventListener("click", () => (inputArea.innerText += 6));
 sevenButton.addEventListener("click", () => (inputArea.innerText += 7));
 eightButton.addEventListener("click", () => (inputArea.innerText += 8));
 nineButton.addEventListener("click", () => (inputArea.innerText += 9));
-clearButton.addEventListener("click", clearAll);
+clearButton.addEventListener("click", clearButtonFunction);
 
 function clearAll() {
   inputArea.innerText = "";
   signIndicator.innerText = "";
+}
+
+function clearButtonFunction() {
+  clearAll();
+  numberVariables.length = 0;
+  console.log(numberVariables);
 }
 
 function clearSign() {
