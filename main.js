@@ -4,7 +4,9 @@ const addButton = document.getElementById("addButton");
 const subtractButton = document.getElementById("subtractButton");
 const multiplyButton = document.getElementById("multiplyButton");
 const divideButton = document.getElementById("divideButton");
+const backspaceButton = document.getElementById("backspaceButton");
 const clearButton = document.getElementById("clearButton");
+
 const zeroButton = document.getElementById("zeroButton");
 const oneButton = document.getElementById("oneButton");
 const twoButton = document.getElementById("twoButton");
@@ -17,18 +19,12 @@ const eightButton = document.getElementById("eightButton");
 const nineButton = document.getElementById("nineButton");
 const equalsButton = document.getElementById("equalsButton");
 const numberButtons = document.querySelector(".numberButtons");
+
 const signIndicator = document.querySelector(".signIndicator");
 
 const numberVariables = [];
-const operatorAtPlay = [];
 
 function add() {
-  // if ((numberVariables.length = 2)) {
-  //   let z = numberVariables[0] + numberVariables[1];
-  // }
-  //   if ((numberVariables.length = 3)) {
-  //     let z = numberVariables[0] + numberVariables[1] + numberVariables + [2];
-  //   }
   let z = numberVariables[0] + numberVariables[1];
   if (z % 1 != 0) {
     let newZ = z.toFixed(2);
@@ -217,12 +213,6 @@ function clearAll() {
   signIndicator.innerText = "";
 }
 
-function clearButtonFunction() {
-  clearAll();
-  numberVariables.length = 0;
-  console.log(numberVariables);
-}
-
 function clearSign() {
   signIndicator.innerText = "";
 }
@@ -231,8 +221,20 @@ function clearInput() {
   inputArea.innerText = "";
 }
 
+function clearButtonFunction() {
+  clearAll();
+  numberVariables.length = 0;
+  console.log(numberVariables);
+}
+
+function backspace() {
+  // Try: Convert numbers into a string and slice them out one by one,
+  // and then convert inputArea back into a number
+}
+
 addButton.addEventListener("click", addX);
 subtractButton.addEventListener("click", subtractX);
 multiplyButton.addEventListener("click", multiplyX);
 divideButton.addEventListener("click", divideX);
 equalsButton.addEventListener("click", operate);
+backspaceButton.addEventListener("click", backspace);
