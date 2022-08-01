@@ -1,5 +1,5 @@
 :root {
-  background: rgb(211, 207, 201);
+  background: rgba(236, 221, 236, 0.623);
 }
 
 .inputContainer,
@@ -37,7 +37,7 @@
 
 .calculatorContainer {
   padding: 0.2em;
-  background-color: wheat;
+  background-color: rgba(179, 202, 245, 0.774);
   width: 400px;
   height: 500px;
   justify-content: space-evenly;
