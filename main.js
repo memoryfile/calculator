@@ -19,6 +19,7 @@ const eightButton = document.getElementById("eightButton");
 const nineButton = document.getElementById("nineButton");
 const equalsButton = document.getElementById("equalsButton");
 const numberButtons = document.querySelector(".numberButtons");
+const decimalButton = document.getElementById("decimalButton");
 
 const signIndicator = document.querySelector(".signIndicator");
 
@@ -237,6 +238,14 @@ function backspace() {
     clearInput();
   }
 }
+
+function decimal() {
+  if (!inputArea.innerHTML.includes(".")) {
+    inputArea.innerHTML += ".";
+  }
+}
+
+decimalButton.addEventListener("click", decimal);
 
 addButton.addEventListener("click", addX);
 subtractButton.addEventListener("click", subtractX);
