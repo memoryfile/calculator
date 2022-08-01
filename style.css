@@ -2,12 +2,23 @@
   background: rgb(211, 207, 201);
 }
 
-.title {
+.title,
+.inputContainer,
+.content,
+.calculatorContainer {
   display: flex;
+  flex-direction: column;
+}
+
+.title {
   justify-content: center;
   padding-bottom: 5vh;
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
+}
+
+.inputContainer {
+    padding-bottom: 40px;
 }
 
 .inputArea {
@@ -16,7 +27,6 @@
 }
 
 .content {
-  display: flex;
   align-items: center;
   justify-content: center;
   height: 75vh;
@@ -26,7 +36,6 @@
 
 .calculatorContainer {
   padding: 0.2em;
-  display: flex;
   background-color: wheat;
   width: 400px;
   height: 500px;
@@ -34,9 +43,32 @@
   border-radius: 0.5em;
 }
 
-/* .inputArea, .clearBackspace, .numberButtons, .functionButtons {
-  flex: 200px;
-} */
+.inputContainer,
+.inputArea,
+.clearBackspace,
+.numberButtons,
+.functionButtons {
+  display: flex;
+  gap: 10px;
+  max-height: 0.2px;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.functionContainer,
+.clearContainer,
+.inputContainer,
+.numberContainer {
+  display: grid;
+  gap: 10px;
+  width: 300px;
+  height: 300px;
+}
+
+.functionButtons button {
+  flex: 1 1 0;
+  width: 100%;
+}
 
 button {
   /* Button 6 from https://getcssscan.com/css-buttons-examples */
@@ -55,7 +87,6 @@ button {
   margin: 0;
   padding: 10px 12px;
   text-align: center;
-  transition: all 200ms;
   vertical-align: baseline;
   white-space: nowrap;
   user-select: none;
