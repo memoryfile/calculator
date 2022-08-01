@@ -1,23 +1,32 @@
+:root {
+  background: rgb(211, 207, 201);
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5vh;
+}
+
 .content {
-  display: grid;
-}
-
-.clearBackspace {
-  padding-bottom: 2vh;
+  display: flex;
   align-items: center;
-}
-.numberButtons {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20px, 1fr));
+  justify-content: center;
+  height: 75vh;
+  min-height: 500px;
   padding: 10px;
-  align-items: center;
-  width: 60px;
 }
 
-.functionButtons {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20px, 1fr));
-    padding: 10px;
-    align-items: center;
-    width: 10vw;
+.calculatorContainer {
+  padding: 0.2em;
+  display: flex;
+  background-color: wheat;
+  width: 400px;
+  height: 500px;
+  justify-content: space-evenly;
+  border-radius: 0.5em;
 }
+
+/* .inputArea, .clearBackspace, .numberButtons, .functionButtons {
+  flex: 200px;
+} */
