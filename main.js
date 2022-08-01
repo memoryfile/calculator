@@ -106,7 +106,7 @@ function addX() {
     // Only supports one instance of a variable not existing
   // } else {
   //   grabX();
-  //   operateEquals();
+  //   operate();
   //   clearAll();
   // }
 }
@@ -145,7 +145,7 @@ function setDivide() {
   signIndicator.innerText = "÷";
 }
 
-function operateEquals() {
+function operate() {
   grabY();
   if (!numberVariables[1]) {
     numberVariables.length = 0;
@@ -211,4 +211,4 @@ addButton.addEventListener("click", addX);
 subtractButton.addEventListener("click", subtractX);
 multiplyButton.addEventListener("click", multiplyX);
 divideButton.addEventListener("click", divideX);
-equalsButton.addEventListener("click", operateEquals);
+equalsButton.addEventListener("click", operate);
