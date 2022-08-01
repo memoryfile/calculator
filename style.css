@@ -2,7 +2,6 @@
   background: rgb(211, 207, 201);
 }
 
-.title,
 .inputContainer,
 .content,
 .calculatorContainer {
@@ -11,6 +10,7 @@
 }
 
 .title {
+  display: flex;
   justify-content: center;
   padding-bottom: 5vh;
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
@@ -18,7 +18,7 @@
 }
 
 .inputContainer {
-    padding-bottom: 40px;
+  padding-bottom: 40px;
 }
 
 .inputArea {
