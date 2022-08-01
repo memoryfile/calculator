@@ -1,20 +1,23 @@
-.gridsContainer {
-  display: flex;
-  flex: 1;
+.content {
+  display: grid;
 }
 
 .clearBackspace {
   padding-bottom: 2vh;
+  align-items: center;
 }
 .numberButtons {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20px, 1fr));
+  padding: 10px;
   align-items: center;
-  width: 10vw;
+  width: 60px;
 }
 
 .functionButtons {
-  /* display: flex; */
-  flex-flow: wrap;
-  align-self: center;
-  padding-top: 2vh;
-  width: 10vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20px, 1fr));
+    padding: 10px;
+    align-items: center;
+    width: 10vw;
 }
