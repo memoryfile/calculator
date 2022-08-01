@@ -228,8 +228,14 @@ function clearButtonFunction() {
 }
 
 function backspace() {
-  // Try: Convert numbers into a string and slice them out one by one,
-  // and then convert inputArea back into a number
+  let x = inputArea.innerText;
+  let y = x.toString().slice(0, -1);
+  let z = Number(y);
+  if (z != 0) {
+  inputArea.innerText = z;
+  } else {
+    clearInput();
+  }
 }
 
 addButton.addEventListener("click", addX);
