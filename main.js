@@ -98,35 +98,55 @@ function grabY() {
   console.log(numberVariables);
 }
 
+function stringHandling() {
+  operate();
+  let x = Number(inputArea.innerText);
+  numberVariables.push(x);
+  clearInput();
+}
+
 function addX() {
-  // if (numberVariables.length < 2) {
+  if (numberVariables.length < 1) {
     grabX();
     clearAll();
     setPlus();
-    // Only supports one instance of a variable not existing
-  // } else {
-  //   grabX();
-  //   operate();
-  //   clearAll();
-  // }
+  } else {
+    stringHandling();
+    setPlus();
+  }
 }
 
 function subtractX() {
-  grabX();
-  clearAll();
-  setMinus();
+  if (numberVariables.length < 1) {
+    grabX();
+    clearAll();
+    setMinus();
+  } else {
+    stringHandling();
+    setMinus();
+  }
 }
 
 function multiplyX() {
-  grabX();
-  clearAll();
-  setMultiply();
+  if (numberVariables.length < 1) {
+    grabX();
+    clearAll();
+    setMultiply();
+  } else {
+    stringHandling();
+    setMultiply();
+  }
 }
 
 function divideX() {
-  grabX();
-  clearAll();
-  setDivide();
+  if (numberVariables.length < 1) {
+    grabX();
+    clearAll();
+    setDivide();
+  } else {
+    stringHandling();
+    setDivide();
+  }
 }
 
 function setPlus() {
@@ -155,18 +175,22 @@ function operate() {
   switch (signIndicator.innerText) {
     case "+":
       add();
+      clearSign();
       break;
 
     case "-":
       subtract();
+      clearSign();
       break;
 
     case "×":
       multiply();
+      clearSign();
       break;
 
     case "÷":
       divide();
+      clearSign();
       break;
   }
   numberVariables.length = 0;
