@@ -56,22 +56,15 @@
   flex-direction: row;
 }
 
-/* .functionContainer, */
 .clearContainer,
 .inputContainer,
 .numberContainer {
   display: grid;
   gap: 10px;
   width: 50%;
-  /* align-items: center; */
   justify-content: space-evenly;
   height: 100px;
 }
-
-/* .functionButtons button {
-  flex: 1 1 0;
-  width: 100%;
-} */
 
 .clearBackspace {
   padding-top: 40px;

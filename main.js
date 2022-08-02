@@ -233,7 +233,7 @@ function backspace() {
   let y = x.toString().slice(0, -1);
   let z = Number(y);
   if (z != 0) {
-  inputArea.innerText = z;
+    inputArea.innerText = z;
   } else {
     clearInput();
   }
