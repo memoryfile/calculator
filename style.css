@@ -40,15 +40,14 @@
   background-color: rgba(179, 202, 245, 0.774);
   width: 400px;
   height: 500px;
-  justify-content: space-evenly;
+  justify-content: space-between;
   border-radius: 0.5em;
 }
 
 .inputContainer,
 .inputArea,
 .clearBackspace,
-.numberButtons,
-.functionButtons {
+.numberButtons {
   display: flex;
   gap: 20px;
   max-height: 10px;
@@ -56,19 +55,26 @@
   flex-direction: row;
 }
 
-.functionContainer,
+/* .functionContainer, */
 .clearContainer,
 .inputContainer,
 .numberContainer {
   display: grid;
   gap: 10px;
-  width: 300px;
+  width: 50%;
+  /* align-items: center; */
+  justify-content: space-evenly;
   height: 100px;
 }
 
-.functionButtons button {
+/* .functionButtons button {
   flex: 1 1 0;
   width: 100%;
+} */
+
+.clearBackspace {
+  display: flex;
+  width: 1000%;
 }
 
 button {
